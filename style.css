@@ -1,0 +1,56 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #7e7c7c;
+    align-items: center;
+    margin: 0;
+}
+
+li{
+    color: white;
+    list-style-position: inside;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(212, 108, 125);
+}
+
+.textStyle {
+    color:white;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(173, 58, 77);
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+}
+h1 {
+    font-size: 1.5em;
+}
+.todo-list {
+    width: 300px;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.todo-list th {
+    text-align: left;
+    padding: 10px;
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+.todo-list tr:nth-child(odd) {
+    background-color: #e6f7ff;
+}
+.todo-list tr:nth-child(even) {
+    background-color: #ffffff;
+}
+.todo-list td {
+    padding: 10px;
+}
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+.delete {
+    color: red;
+    cursor: pointer;
+}

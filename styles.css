@@ -1,0 +1,39 @@
+.italic-text {
+    font-style: italic;
+    font-size: 30px;
+    background-color: #90EE90;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.bold-text {
+    font-weight: bold;
+    background-color: #00FFFF;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.offset-text {
+    background-color: #FFB6C1;
+    padding: 5px;
+    margin: 10px 0;
+    margin-left: 20px;
+}
+
+button {
+    background-color: #DCDCDC;
+    border: none;
+    padding: 15px 20px;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.header {
+    margin: 10px 0;
+}
+
+h1 {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+}

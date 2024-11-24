@@ -1,0 +1,38 @@
+@keyframes grayscale {
+    0% {
+        width: 128px;
+        height: 128px;
+        filter: grayscale();
+    }
+    100% {
+        width: 148px;
+        height: 148px;
+        filter: none;
+    }
+}
+
+@keyframes reverse-grayscale {
+    0% {
+        width: 148px;
+        height: 148px;
+        filter: none;
+    }
+    100% {
+        width: 128px;
+        height: 128px;
+        filter: grayscale();
+    }
+}
+
+.heart {
+    width: 128px;
+    height: 128px;
+}
+
+.hearts:hover {
+    animation: grayscale 0.5s forwards;
+}
+
+.hearts:not(:hover) {
+    animation: reverse-grayscale 0.5s forwards;
+}

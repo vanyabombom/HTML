@@ -1,0 +1,84 @@
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: grey;
+}
+
+
+.nav-container {
+    width: 97.9%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #696969;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-button {
+    display: inline-block;
+}
+
+.nv-btn {
+    background-color: lightgrey;
+    border: none;
+    border-radius: 15px;
+    height: 40px;
+    width: 150px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nv-btn:hover {
+    background-color: yellow;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.nav-login {
+    display: flex;
+    align-items: center;
+}
+
+.nv-log {
+    background-color: lightgrey;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nv-log:hover {
+    background-color: yellow;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.userIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}

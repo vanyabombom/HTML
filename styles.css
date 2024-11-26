@@ -1,77 +1,165 @@
-
+/* Общие стили */
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: grey;
+    font-family: 'Panton Narrow', Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+    background-color: #111;
+    position: relative;
 }
 
+/* Анимированный фон */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
+.background,
+.background:before {
+    --s: 100px; /* Размер узора */
+    --g: 3px;  /* Размер зазора */
+    --c: rgb(255, 255, 255); /* Цвет стрелок */
+    --_l: #0000 calc(33% - .866 * var(--g)), var(--c) calc(33.2% - .866 * var(--g)) 33%, #0000 34%;
+    background:
+        repeating-linear-gradient(var(--c) 0 var(--g), #0000 0 50%) 0 calc(.866 * var(--s) - var(--g) / 2),
+        conic-gradient(from -150deg at var(--g) 50%, var(--c) 120deg, #0000 0),
+        linear-gradient(-120deg, var(--_l)),
+        linear-gradient(-60deg, var(--_l)) #888787;
+    background-size: var(--s) calc(3.466 * var(--s));
+}
+
+.background {
+    animation: move-left infinite 10s linear;
+}
+
+.background:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    -webkit-mask: 
+        linear-gradient(#000 50%, #0000 0) 
+        0 calc(.866 * var(--s)) / 100% calc(3.466 * var(--s));
+    mask: 
+        linear-gradient(#000 50%, #0000 0) 
+        0 calc(.866 * var(--s)) / 100% calc(3.466 * var(--s));
+    background:
+        repeating-linear-gradient(var(--c) 0 var(--g), #0000 0 50%) 0 calc(.866 * var(--s) - var(--g) / 2),
+        conic-gradient(from -150deg at var(--g) 50%, var(--c) 120deg, #0000 0),
+        linear-gradient(-120deg, var(--_l)),
+        linear-gradient(-60deg, var(--_l)) #888787;
+    background-size: var(--s) calc(3.466 * var(--s));
+    animation: move-right infinite 10s linear;
+}
+
+/* Анимации */
+@keyframes move-left {
+    to {
+        background-position-x: calc(-1 * var(--s));
+    }
+}
+
+@keyframes move-right {
+    to {
+        background-position-x: calc(1 * var(--s));
+    }
+}
+
+/* Навбар */
 .nav-container {
-    width: 97.9%;
-    height: 75px;
+    width: 100%;
+    height: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    background-color: #696969;
+    justify-content: center;
+    background-color: #830101;
     border-bottom: 1px solid #ccc;
+    position: relative;
 }
 
+.logo-container {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 .logo {
     height: 50px;
     width: auto;
 }
 
+.textLogo {
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    white-space: nowrap;
+}
 
 .nav-buttons {
     display: flex;
     gap: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-button {
-    display: inline-block;
+.nav-login {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
 }
 
-.nv-btn {
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: lightgrey;
+    transition: 0.3s;
+}
+
+.burger-toggle {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #696969;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.nv-btn, .nv-log {
     background-color: lightgrey;
     border: none;
     border-radius: 15px;
-    height: 40px;
-    width: 150px;
+    padding: 10px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.nv-btn:hover {
-    background-color: yellow;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-
-.nav-login {
-    display: flex;
-    align-items: center;
-}
-
-.nv-log {
-    background-color: lightgrey;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nv-log:hover {
+.nv-btn:hover, .nv-log:hover {
     background-color: yellow;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -81,4 +169,26 @@ body {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .nav-buttons, .nav-login {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-toggle:checked ~ .mobile-menu {
+        display: flex;
+    }
+}
+
+@font-face {
+    font-family: 'Panton Narrow';
+    src: url('PantonNarrow-Trial-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
 }

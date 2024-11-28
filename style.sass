@@ -1,0 +1,104 @@
+$NavbarColor: Purple
+$Font: Arial, Helvetica, sans-serif
+$MenuFontColor: white
+$ActiveMenuBg: white
+$ActiveMenuText: $NavbarColor
+
+* 
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+header
+  width: 100%
+  height: 80px
+  background-color: $NavbarColor
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 20px
+  z-index: 1
+
+.logo
+  font-size: 3em
+  font-weight: 600
+  color: white
+  font-family: $Font
+
+.menu
+  display: flex
+  list-style: none
+
+li
+  margin: 0 15px
+  position: relative
+  border: 2px solid white
+  border-radius: 10px
+  padding: 10px
+  overflow: hidden
+  transition: background-color 0.3s ease, color 0.3s ease
+
+  &:hover
+    background-color: white
+
+    a
+      color: $NavbarColor
+
+a
+    text-decoration: none
+    font-family: $Font
+    color: $MenuFontColor
+    transition: all 0.3s ease
+   
+main
+  position: relative
+  width: 100%
+  height: 100vh
+  font-family: $Font
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    z-index: 0
+    position: absolute
+    top: 0
+    left: 0
+
+  .main-block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1
+    text-align: center
+    color: white
+
+    h1
+      font-size: 3rem
+      font-weight: bold
+      margin-bottom: 1rem
+
+    h3
+      font-size: 1.5rem
+      margin-bottom: 1rem
+
+    p
+      font-size: 1.2rem
+      margin-bottom: 1.5rem
+
+    .button
+      display: inline-block
+      padding: 10px 20px
+      background-color: $NavbarColor
+      color: white
+      text-transform: uppercase
+      font-weight: bold
+      border-radius: 10px
+      text-decoration: none
+      transition: all 0.3s ease
+
+      &:hover
+        background-color: #white
+
+

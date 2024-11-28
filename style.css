@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: Purple;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 3em;
+  font-weight: 600;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 0 20px;
+  position: relative;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+li:hover {
+  background-color: white;
+}
+li:hover a {
+  color: Purple;
+}
+
+a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .main-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+main .main-block h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+main .main-block h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+main .main-block p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+main .main-block .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: Purple;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+main .main-block .button:hover {
+  background-color: #white;
+}/*# sourceMappingURL=style.css.map */

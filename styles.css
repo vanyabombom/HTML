@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.background{
+    background-color: #111111;
+}
+
+.card {
+    display: inline-block;
+    width: 20%;
+    height: 400px;
+    margin: 10px;
+    border-top: 2px solid gray;
+    border-left: 2px solid gray;
+    box-shadow: 5px 5px 12px black;
+    background: #FFFFFF25;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 20px black; 
+}
+
+p {
+    margin-top: 0px;
+    padding: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.enterprise {
+    border-bottom: 3px solid red;
+}
+
+.professional {
+    border-bottom: 3px solid orange;
+}
+
+.standard {
+    border-bottom: 3px solid blue;
+}
+
+.basic {
+    border-bottom: 3px solid lime;
+}
+
+.price {
+    font-size: 40px;
+    text-align: center;
+}
+
+.amount {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.period {
+    color: black;
+    font-size: 20px;
+}
+
+.features {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 2;
+}
+
+.buyButton {
+    display: inline-block;
+    background-color: white;
+    width: 50%;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.buyButton:hover {
+    background-color: black;
+    color: white;
+}

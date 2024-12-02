@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4epuhaPost - Price</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'PantonNarrow', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #990000;
+            color: rgb(202, 199, 199);
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .pricelist {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        .pricelist h2 {
+            text-align: center;
+            color: #990000;
+        }
+
+        .pricelist-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .pricelist-table th,
+        .pricelist-table td {
+            border: 1px solid #ffffff;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .pricelist-table th {
+            background: #990000;
+            color: white;
+        }
+
+        .pricelist-table tr:nth-child(even) {
+            background: #5f4949;
+        }
+
+        .back-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 150px;
+        }
+
+        .back-btn:hover {
+            background-color: #770000;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>4epuhaPost Price List</h1>
+    </div>
+
+    <div class="pricelist">
+        <h2>Our Services and Prices</h2>
+        <table class="pricelist-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Standard Delivery</td>
+                    <td>Delivery within 3-5 business days</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Express Delivery</td>
+                    <td>Delivery within 1-2 business days</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>International Shipping</td>
+                    <td>Delivery to any country</td>
+                    <td>$50</td>
+                </tr>
+                <tr>
+                    <td>Package Insurance</td>
+                    <td>Protect your package during transit</td>
+                    <td>$5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="index.html" class="back-btn">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4epuhaPost - Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Panton Narrow';
+            background: repeating-linear-gradient(
+                var(--c) 0 var(--g),
+                #0000 0 50%
+            ) 0 calc(0.866 * var(--s) - var(--g) / 2),
+            conic-gradient(from -150deg at var(--g) 50%, var(--c) 120deg, #0000 0),
+            linear-gradient(-120deg, var(--_l)),
+            linear-gradient(-60deg, var(--_l)) #888787;
+            background-size: var(--s) calc(3.466 * var(--s));
+            --s: 100px;
+            --g: 3px;
+            --c: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form {
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            width: 350px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            margin-bottom: 15px;
+        }
+
+        .input-container input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            font-size: 1rem;
+            background: #1c1c1c;
+            color: #fff;
+        }
+
+        .submit {
+            background-color: #d12d2d;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+        }
+
+        .submit:hover {
+            background-color: #a81f1f;
+        }
+
+        .signup-link {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .signup-link a {
+            color: #d12d2d;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form class="form">
+        <p class="form-title">Sign in to your account</p>
+        <div class="input-container">
+            <input type="email" placeholder="Enter email" required>
+        </div>
+        <div class="input-container">
+            <input type="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="submit">Sign in</button>
+        <p class="signup-link">
+            No account? <a href="#">Sign up</a>
+        </p>
+    </form>
+</body>
+</html>

@@ -5,7 +5,12 @@
     box-sizing: border-box;
     font-family: 'Panton Narrow', Arial, sans-serif;
 }
-
+@font-face {
+  font-family: 'Panton Narrow';
+  src: url('/PantonNarrow-Trial-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
 body {
     color: white;
     overflow: hidden;

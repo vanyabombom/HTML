@@ -275,13 +275,13 @@ body {
     background-color: #410f09; 
     color: white; 
     text-align: center;
-    padding: 30px ; 
+    padding: 10px ; 
     font-size: 16px; 
-    position: relative; 
+    position: fixed; 
     bottom: 0;
     width: 100%; 
     z-index: 10;
-    height: 110px;
+    height: 80px;
 }
 
 .search-container {

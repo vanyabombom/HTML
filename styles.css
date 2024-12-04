@@ -418,6 +418,7 @@ body {
   justify-content: space-between;
 }
 
+/* Увеличение размера для крупных экранов */
 @media (min-width: 1024px) {
   .news-grid {
       grid-template-columns: repeat(3, 1fr);
@@ -428,6 +429,18 @@ body {
   }
 }
 
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+  .news-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-card.featured {
+      grid-column: span 2;
+  }
+}
+
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .news-grid {
       grid-template-columns: 1fr;
@@ -441,6 +454,7 @@ body {
       font-size: 24px;
   }
 }
+
 
   
 

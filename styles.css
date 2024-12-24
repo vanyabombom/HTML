@@ -39,10 +39,6 @@ li a {
     padding: 20px;
 }
 
-li a:hover {
-    color: rgb(224, 96, 11);
-}
-
 button {
     border: 1px solid gold;
     width: 16px;

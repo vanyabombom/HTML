@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: white;
+}
+
+.menu {
+    display: flex;
+    background-color: black;
+    width: fit-content;
+}
+
+.menu-item {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 20px 35px;
+    background-color: black;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: dimgray;
+}
+
+.menu-item.active {
+    background-color: dimgray;
+}
+
+</style>
+<body>
+    <nav class="menu">
+        <a href="#" class="menu-item">Инвесторам</a>
+        <a href="#" class="menu-item">Реклама</a>
+        <a href="#" class="menu-item">Вакансии</a>
+    </nav>
+</body>
+
+</html>

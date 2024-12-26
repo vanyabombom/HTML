@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:gray
+}
+
+.chat {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.message {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.message.right {
+    grid-template-columns: 1fr 30px;
+    text-align: right;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ddd;
+    object-fit: cover;
+}
+
+.avatar img {
+    width: 30px;
+    height: 30px;
+}
+
+.bubble {
+    background: #ffcdd2;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    max-width: 400px;
+}
+
+.right .bubble {
+    background: #b3e5fc;
+    justify-self: end;
+}
+
+.right .time {
+    text-align: right; 
+}
+
+.time {
+    font-size: 12px;
+    color: white;
+    margin-top: 4px;
+}
+</style>
+<body>
+    <div class="chat">
+      <div class="message">
+        <div class="avatar">
+            <img src="images/user.png" alt="1">
+        </div>
+        <div>
+          <div class="bubble">Ut in enim scelerisque, pharetra velit id, maximus nunc</div>
+          <div class="time">4 hours ago</div>
+        </div>
+      </div>
+  
+      <div class="message right">
+        <div>
+          <div class="bubble">Fusce auctor nibh at consequat efficitur</div>
+          <div class="time">4 hours ago</div>
+        </div>
+        <div class="avatar">
+            <img src="images/user.png" alt="1">
+        </div>
+      </div>
+  
+      <div class="message">
+        <div class="avatar">
+            <img src="images/user.png" alt="1">
+        </div>
+        <div>
+          <div class="bubble">Etiam lacinia velit id venenatis sodales</div>
+          <div class="time">3 hours ago</div>
+        </div>
+      </div>
+  
+      <div class="message right">
+        <div>
+          <div class="bubble">Mauris ac mi quis ante dignissim tempus in non nulla Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate possimus aspernatur, molestiae, sapiente nemo repudiandae quidem, sint ab deserunt sed earum. Labore accusamus aliquam obcaecati et, asperiores quisquam non!</div>
+          <div class="time">3 hours ago</div>
+        </div>
+        <div class="avatar">
+            <img src="images/user.png" alt="1">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
